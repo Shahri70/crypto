@@ -1,0 +1,16 @@
+version: 2
+
+models:
+    - name: streamingClean
+      description: "A dbt model for the result set of the SQL query"
+      columns:
+          - name: SYMBOL
+            tests:
+                - not_null
+          - name: PRICE
+            tests:
+                - not_null
+          - name: TIMESTAMP
+            tests:
+                - not_null
+
