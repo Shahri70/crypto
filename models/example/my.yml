@@ -13,4 +13,7 @@ models:
           - name: TIMESTAMP
             tests:
                 - not_null
+          - name: QTY
+            tests:
+                - not_null
 
