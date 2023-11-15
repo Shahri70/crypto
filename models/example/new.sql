@@ -1,8 +1,8 @@
-SELECT SYMBOL, PRICE, TIMESTAMP
+SELECT SYMBOL, PRICE, TIMESTAMP,QTY
 FROM (
     SELECT 
         SYMBOL,
-        PRICE,
+        PRICE,QTY,
         TIMESTAMP,
         ROW_NUMBER() OVER (PARTITION BY SYMBOL ORDER BY TIMESTAMP DESC) as row_num
     FROM stockexchangeprediction.StreamingCrypto.streaming
